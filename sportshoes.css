@@ -189,11 +189,18 @@ ul {
     border: 2px solid transparent;
 }
 
-.middlesectionboxfirst, .middlesectionboxsecond, .middlesectionboxthird, .middlesectionboxfourth, .middlesectionboxfifth, .middlesectionboxsixth {
+#middlesectionboxfirst, 
+#middlesectionboxsecond, 
+#middlesectionboxthird, 
+#middlesectionboxfourth, 
+#middlesectionboxfifth, 
+#middlesectionboxsixth {
     border: 2px solid rgb(228, 228, 228);
     width: 400px;
     height: 300px;
     border-radius: 8px;
+    overflow: hidden;
+    background-image: none;
 }
 
 .middlesectiontext {

@@ -33,14 +33,21 @@ let request = new XMLHttpRequest();
 };
 
 
-/*
-document.getElementById('lat').textContent = data;
-document.getElementById('lat').textContent = data;
 
-document.getElementById('lat').textContent = data;
-document.getElementById('lat').textContent = data;
-document.getElementById('lat').textContent = data;
-document.getElementById('lat').textContent = data;
+function changeImage() {
+
+document.getElementById("image1").src = "url('https://s3-eu-west-1.amazonaws.com/static.wm3.se/sites/384/media/124925_original_28-nike-hyperdunk-2016-elite-4.png?1486647060')";
+document.getElementById("image2").src = "url('https://s3-eu-west-1.amazonaws.com/static.wm3.se/sites/384/media/124925_original_28-nike-hyperdunk-2016-elite-4.png?1486647060')";
+document.getElementById('image3').src = "url('https://s3-eu-west-1.amazonaws.com/static.wm3.se/sites/384/media/124925_original_28-nike-hyperdunk-2016-elite-4.png?1486647060')";
+document.getElementById('image4').src = "url('https://s3-eu-west-1.amazonaws.com/static.wm3.se/sites/384/media/124925_original_28-nike-hyperdunk-2016-elite-4.png?1486647060')";
+document.getElementById('image5').src = "url('https://s3-eu-west-1.amazonaws.com/static.wm3.se/sites/384/media/124925_original_28-nike-hyperdunk-2016-elite-4.png?1486647060')";
+document.getElementById('image6').src = "url('https://s3-eu-west-1.amazonaws.com/static.wm3.se/sites/384/media/124925_original_28-nike-hyperdunk-2016-elite-4.png?1486647060')";
+
+};
+
+changeImage();
+
+/*
 document.getElementById('lat').textContent = data;
 document.getElementById('lat').textContent = data;
 */ 
