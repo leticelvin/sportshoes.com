@@ -211,7 +211,7 @@ ul {
     height: 42px;
 }
 
-.startedfromtext {
+.startedfromtextone, .startedfromtexttwo, .startedfromtextthree {
     color: white;
     font-family: "Source Sans Pro", "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-weight: 600;
@@ -225,7 +225,6 @@ ul {
 
 .shoenameone, .shoenametwo, .shoenamethree {
     color: rgb(102, 240, 198);
-    margin-left: 10px;
     font-size: 150px;
     font-weight: 600;
 }

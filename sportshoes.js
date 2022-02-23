@@ -41,6 +41,7 @@ let request = new XMLHttpRequest();
 
           console.log(importantdata.products[2].name); //THIS WORKS!!!
 
+          /*----------------Names-------------------------------------------------------*/
            var productTextOne = importantdata.products[0].name; 
            var productTextTwo = importantdata.products[0].name;
            var productTextThree = importantdata.products[0].name;
@@ -50,17 +51,60 @@ let request = new XMLHttpRequest();
            var text = document.getElementsByClassName('shoenameone').textContent;
            console.log("text: " + text);
 
-           document.querySelector('.shoenameone').textContent = productTextOne;  
-           document.querySelector('.shoenameone').textContent = productTextTwo;  
-           document.querySelector('.shoenameone').textContent = productTextThree;
+           let productTextOneCapitalized = productTextOne.toUpperCase();
+           let productTextTwoCapitalized = productTextTwo.toUpperCase();
+           let productTextThreeCapitalized = productTextThree.toUpperCase();
 
+           document.querySelector('.shoenameone').textContent = productTextOneCapitalized;  
+           document.querySelector('.shoenameone').textContent = productTextTwoCapitalized;  
+           document.querySelector('.shoenameone').textContent = productTextThreeCapitalized;
+           /*-----------------------------------------------------------------------------*/
+
+           /*----------------Prices-------------------------------------------------------*/
+           var productPriceOne = importantdata.products[0].master.current_price.amount;
+           var productPriceTwo = importantdata.products[1].master.current_price.amount;
+           var productPriceThree = importantdata.products[2].master.current_price.amount;
+ 
+           document.querySelector('.startedfromtextone').textContent = productPriceOne;  
+           document.querySelector('.startedfromtexttwo').textContent = productPriceTwo;  
+           document.querySelector('.startedfromtextthree').textContent = productPriceThree;
+
+
+
+
+           var gridimageone = importantdata.products[0].product_image.url; //THIS WORKS!!!
+           document.getElementById('image1').src = gridimageone;
+
+           var gridimagetwo = importantdata.products[1].product_image.url; //THIS WORKS!!!
+           document.getElementById('image2').src = gridimagetwo;
+
+           var gridimagethree = importantdata.products[2].product_image.url; //THIS WORKS!!!
+           document.getElementById('image3').src = gridimagethree;
+
+           var gridimagefour = importantdata.products[3].product_image.url; //THIS WORKS!!!
+           document.getElementById('image4').src = gridimagefour;
+
+           var gridimagefive = importantdata.products[4].product_image.url; //THIS WORKS!!!
+           document.getElementById('image5').src = gridimagefive;
+
+           var gridimagesix = importantdata.products[5].product_image.url; //THIS WORKS!!!
+           document.getElementById('image6').src = gridimagesix;
+
+
+           /*-----------------------------------------------------------------------------*/
            /*
+
+           let productTextOneCapitalized = productTextOne.toUpperCase();
+           let productTextTwoCapitalized = productTextTwo.toUpperCase();
+           let productTextThreeCapitalized = productTextThree.toUpperCase();
 
           XMLHttpRequest { onreadystatechange: null, readyState: 4, timeout: 0, withCredentials: false, upload: XMLHttpRequestUpload, 
             responseURL: "https://webshop.wm3.se/api/v1/shop/products.json?price=true", status: 200, statusText: "OK", responseType: "", response: 
             "{\"products\":[{\"id\":28949,\"name\":\"Dame 3\",\"sku\":\"12007\",\"reference\":\"12007
 
-          
+         
+
+
           Object { id: 28949, name: "Dame 3", sku: "12007", reference: "12007 - Dame 3", url: "dame-3", variant_id: 76592, product_image: {…}, published_content: {…}, country_affinity: {}, product_relations: [], … }
           
           productsdata = JSON.parse(request.response);
@@ -80,7 +124,7 @@ let request = new XMLHttpRequest();
 
 function changeImage() {
 
-document.getElementById('image1').src = "http://127.0.0.1:5500/124925.PNG";
+document.getElementById('image1').src = gridimageone;
 document.getElementById('image2').src = "http://127.0.0.1:5500/124925.PNG";
 document.getElementById('image3').src = "http://127.0.0.1:5500/124925.PNG";
 document.getElementById('image4').src = "http://127.0.0.1:5500/124925.PNG";
