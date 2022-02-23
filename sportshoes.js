@@ -7,7 +7,6 @@ const api_url = 'https://webshop.wm3.se/api/v1/shop/products';
 
 getData();
 
-
 async function getData() {
 
 const response = await fetch(api_url);
@@ -16,8 +15,9 @@ console.log(data);
 
 document.getElementById('lat').textContent = data;
 
-
 }*/
+
+var productsdata;
 
 let request = new XMLHttpRequest();
       request.open("GET", "https://webshop.wm3.se/api/v1/shop/products.json?price=true");
@@ -27,25 +27,84 @@ let request = new XMLHttpRequest();
         if (request.status === 200) {
           // by default the response comes in the string format, we need to parse the data into JSON
           console.log(JSON.parse(request.response));
+          console.log(JSON.parse(request.responseText));
+
+          var importantdata = (JSON.parse(request.responseText));
+          console.log(importantdata.products[0]);
+          console.log(importantdata.products[0].id); //THIS WORKS!!!
+          console.log(importantdata.products[0].product_image); //THIS WORKS!!!
+
+          console.log(importantdata.products[1]);
+          console.log(importantdata.products[1].id); //THIS WORKS!!!
+          console.log(importantdata.products[1].name); //THIS WORKS!!!
+          console.log(importantdata.products[1].product_image); //THIS WORKS!!!
+
+          console.log(importantdata.products[2].name); //THIS WORKS!!!
+
+           var productTextOne = importantdata.products[0].name; 
+           var productTextTwo = importantdata.products[0].name;
+           var productTextThree = importantdata.products[0].name;
+
+           console.log("productname: " + productTextOne);
+
+           var text = document.getElementsByClassName('shoenameone').textContent;
+           console.log("text: " + text);
+
+           document.querySelector('.shoenameone').textContent = productTextOne;  
+           document.querySelector('.shoenameone').textContent = productTextTwo;  
+           document.querySelector('.shoenameone').textContent = productTextThree;
+
+           /*
+
+          XMLHttpRequest { onreadystatechange: null, readyState: 4, timeout: 0, withCredentials: false, upload: XMLHttpRequestUpload, 
+            responseURL: "https://webshop.wm3.se/api/v1/shop/products.json?price=true", status: 200, statusText: "OK", responseType: "", response: 
+            "{\"products\":[{\"id\":28949,\"name\":\"Dame 3\",\"sku\":\"12007\",\"reference\":\"12007
+
+          
+          Object { id: 28949, name: "Dame 3", sku: "12007", reference: "12007 - Dame 3", url: "dame-3", variant_id: 76592, product_image: {…}, published_content: {…}, country_affinity: {}, product_relations: [], … }
+          
+          productsdata = JSON.parse(request.response);
+          console.info(JSON.parse(request.response[0]));
+
+
+          */
+
         } else {
           console.log(`error ${request.status} ${request.statusText}`);
         }
 };
 
-
+/* document.getElementsByClassName('shoenameone').innerText = productTextOne  
+ document.getElementsByClassName('shoenametwo').innerText = productTextTwo  
+ document.getElementsByClassName('shoenamethree').innerText = productTextThree  */
 
 function changeImage() {
 
-document.getElementById("image1").src = "url('https://s3-eu-west-1.amazonaws.com/static.wm3.se/sites/384/media/124925_original_28-nike-hyperdunk-2016-elite-4.png?1486647060')";
-document.getElementById("image2").src = "url('https://s3-eu-west-1.amazonaws.com/static.wm3.se/sites/384/media/124925_original_28-nike-hyperdunk-2016-elite-4.png?1486647060')";
-document.getElementById('image3').src = "url('https://s3-eu-west-1.amazonaws.com/static.wm3.se/sites/384/media/124925_original_28-nike-hyperdunk-2016-elite-4.png?1486647060')";
-document.getElementById('image4').src = "url('https://s3-eu-west-1.amazonaws.com/static.wm3.se/sites/384/media/124925_original_28-nike-hyperdunk-2016-elite-4.png?1486647060')";
-document.getElementById('image5').src = "url('https://s3-eu-west-1.amazonaws.com/static.wm3.se/sites/384/media/124925_original_28-nike-hyperdunk-2016-elite-4.png?1486647060')";
-document.getElementById('image6').src = "url('https://s3-eu-west-1.amazonaws.com/static.wm3.se/sites/384/media/124925_original_28-nike-hyperdunk-2016-elite-4.png?1486647060')";
+document.getElementById('image1').src = "http://127.0.0.1:5500/124925.PNG";
+document.getElementById('image2').src = "http://127.0.0.1:5500/124925.PNG";
+document.getElementById('image3').src = "http://127.0.0.1:5500/124925.PNG";
+document.getElementById('image4').src = "http://127.0.0.1:5500/124925.PNG";
+document.getElementById('image5').src = "http://127.0.0.1:5500/124925.PNG";
+document.getElementById('image6').src = "http://127.0.0.1:5500/124925.PNG";
 
 };
 
 changeImage();
+
+/*
+Steps
+
+1. Retrieve price from 3 products and display it on header ("Starting from 799$")
+
+2. Retrieve the name of 3 products and display them on the header ("Lebron XIII")
+
+3. Retrieve the images of 6 products and display them in the grid
+
+document.getElementById('image6').src = "url('https://s3-eu-west-1.amazonaws.com/static.wm3.se/sites/384/media/124925_original_28-nike-hyperdunk-2016-elite-4.png?1486647060')";
+document.getElementById('image1').src = "url('http://127.0.0.1:5500/124925.PNG')";
+*/ 
+
+
 
 /*
 document.getElementById('lat').textContent = data;

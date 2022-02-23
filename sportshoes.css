@@ -59,10 +59,9 @@ body {
 
 .mainbackground {
     /*background-color: rgb(85, 62, 100);*/
-    background-image: '/shopbackground.png';
     height: 1100px;
     width: 100%;
-    background-image:url("file:///C:/Users/46722/Desktop/Sportshoes Webbsida//shopbackground.png"); 
+    background-image:url(http://127.0.0.1:5500/shopbackground.png); 
     margin-top: -16px;
     margin-left: -10px;
     z-index: 1;
@@ -148,7 +147,7 @@ ul {
 .fightandrun {
     width: 520px;
     height: 560px;
-    background-image:url("file:///C:/Users/46722/Desktop/Sportshoes Webbsida//f2.PNG");
+    background-image:url("http://127.0.0.1:5500/f2.PNG");
     background-position: center; 
     padding-left: 30px;
     padding-right: 30px;
@@ -161,7 +160,7 @@ ul {
 .fightlikeaspider {
     width: 520px;
     height: 560px;
-    background-image:url("file:///C:/Users/46722/Desktop/Sportshoes Webbsida//f1.PNG");
+    background-image:url("http://127.0.0.1:5500/f1.PNG");
     background-position: center; 
     padding-left: 30px;
     padding-right: 30px;
@@ -222,6 +221,22 @@ ul {
 .buttontext {
     font-weight: 700;
     font-size: 14px;
+}
+
+.shoenameone, .shoenametwo, .shoenamethree {
+    color: rgb(102, 240, 198);
+    margin-left: 10px;
+    font-size: 150px;
+    font-weight: 600;
+}
+
+.carousel-item {
+    margin-left: 600px;
+    margin-top: 180px;
+}
+
+.carouselimage {
+    margin-left: 500px;
 }
 
 .main-footer {
