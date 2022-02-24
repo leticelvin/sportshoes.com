@@ -48,6 +48,9 @@ let request = new XMLHttpRequest();
 
            /*-------------------------------------------------------------------------------*/
 
+           /*----------------Header Images--------------------------------------------------*/
+
+           /*-------------------------------------------------------------------------------*/
 
            var gridimageone = importantdata.products[0].product_image.url; //THIS WORKS!!!
            document.getElementById('image1').src = gridimageone;
@@ -66,6 +69,16 @@ let request = new XMLHttpRequest();
 
            var gridimagesix = importantdata.products[5].product_image.url; //THIS WORKS!!!
            document.getElementById('image6').src = gridimagesix;
+
+
+           
+           document.querySelector('.carouselimageone').src = gridimageone;
+
+           
+           document.querySelector('.carouselimagetwo').src = gridimagetwo;
+
+           
+           document.querySelector('.carouselimagethree').src = gridimagethree;
 
 
            /*-----------------------------------------------------------------------------*/

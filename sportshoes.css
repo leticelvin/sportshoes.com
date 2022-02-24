@@ -109,10 +109,7 @@ height: 40px;
 width: 100px;
 }
 
-#carouselimage {
-    width: 300px!important;
-    height: 300px;
-}
+
 
 /*.carousel {
     position: absolute;
@@ -222,8 +219,8 @@ ul {
 .priceone, .pricetwo, .pricethree {
     color: white;
     font-family: "Source Sans Pro", "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-weight: 600;
-    font-size: 16px;
+    font-weight: 700;
+    font-size: 30px;
 }
 
 .buttontext {
@@ -235,16 +232,33 @@ ul {
     color: rgb(102, 240, 198);
     font-size: 150px;
     font-weight: 600;
+    background: -webkit-linear-gradient(to right, rgb(102, 240, 198), rgb(48, 95, 70));
+    background: linear-gradient(to right, rgb(102, 240, 198), rgb(49, 95, 70));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 1;
 }
 
 .carousel-item {
     margin-left: 600px;
-    margin-top: 180px;
+    margin-top: 200px;
+    margin-bottom: 140px;
+    height: 500px;
+    padding-top: 100px;
 }
 
-.carouselimage {
-    margin-left: 500px;
+.carouselimage, .carouselimageone, .carouselimagetwo, .carouselimagethree {
+    margin-left: 900px;
+    mix-blend-mode: multiply;
+    width: 600px!important;
+    height: 600px!important;
+    z-index: 10;
+    /*clip: rect(80px,40px,30px,0px);*/
+    position: absolute;
 }
+
+
 
 .main-footer {
     margin-left: 0px;
