@@ -1,22 +1,4 @@
 
-
-/*import fetch from "node-fetch";*/
-
-/*
-const api_url = 'https://webshop.wm3.se/api/v1/shop/products';
-
-getData();
-
-async function getData() {
-
-const response = await fetch(api_url);
-const data = await response.json();
-console.log(data);
-
-document.getElementById('lat').textContent = data;
-
-}*/
-
 var productsdata;
 
 let request = new XMLHttpRequest();
@@ -43,21 +25,16 @@ let request = new XMLHttpRequest();
 
           /*----------------Names-------------------------------------------------------*/
            var productTextOne = importantdata.products[0].name; 
-           var productTextTwo = importantdata.products[0].name;
-           var productTextThree = importantdata.products[0].name;
+           var productTextTwo = importantdata.products[1].name;
+           var productTextThree = importantdata.products[2].name;
 
-           console.log("productname: " + productTextOne);
-
-           var text = document.getElementsByClassName('shoenameone').textContent;
-           console.log("text: " + text);
-
-           let productTextOneCapitalized = productTextOne.toUpperCase();
-           let productTextTwoCapitalized = productTextTwo.toUpperCase();
-           let productTextThreeCapitalized = productTextThree.toUpperCase();
+           var productTextOneCapitalized = productTextOne.toUpperCase();
+           var productTextTwoCapitalized = productTextTwo.toUpperCase();
+           var productTextThreeCapitalized = productTextThree.toUpperCase();
 
            document.querySelector('.shoenameone').textContent = productTextOneCapitalized;  
-           document.querySelector('.shoenameone').textContent = productTextTwoCapitalized;  
-           document.querySelector('.shoenameone').textContent = productTextThreeCapitalized;
+           document.querySelector('.shoenametwo').textContent = productTextTwoCapitalized;  
+           document.querySelector('.shoenamethree').textContent = productTextThreeCapitalized;
            /*-----------------------------------------------------------------------------*/
 
            /*----------------Prices-------------------------------------------------------*/
@@ -65,11 +42,11 @@ let request = new XMLHttpRequest();
            var productPriceTwo = importantdata.products[1].master.current_price.amount;
            var productPriceThree = importantdata.products[2].master.current_price.amount;
  
-           document.querySelector('.startedfromtextone').textContent = productPriceOne;  
-           document.querySelector('.startedfromtexttwo').textContent = productPriceTwo;  
-           document.querySelector('.startedfromtextthree').textContent = productPriceThree;
+           document.querySelector('.priceone').textContent = productPriceOne;  
+           document.querySelector('.pricetwo').textContent = productPriceTwo;  
+           document.querySelector('.pricethree').textContent = productPriceThree;
 
-
+           /*-------------------------------------------------------------------------------*/
 
 
            var gridimageone = importantdata.products[0].product_image.url; //THIS WORKS!!!
@@ -101,9 +78,6 @@ let request = new XMLHttpRequest();
           XMLHttpRequest { onreadystatechange: null, readyState: 4, timeout: 0, withCredentials: false, upload: XMLHttpRequestUpload, 
             responseURL: "https://webshop.wm3.se/api/v1/shop/products.json?price=true", status: 200, statusText: "OK", responseType: "", response: 
             "{\"products\":[{\"id\":28949,\"name\":\"Dame 3\",\"sku\":\"12007\",\"reference\":\"12007
-
-         
-
 
           Object { id: 28949, name: "Dame 3", sku: "12007", reference: "12007 - Dame 3", url: "dame-3", variant_id: 76592, product_image: {…}, published_content: {…}, country_affinity: {}, product_relations: [], … }
           
@@ -201,3 +175,20 @@ curl -X GET https://webshop.wm3.se/api/v1/shop/products/search -d
 
 Browser:
 https://webshop.wm3.se/api/v1/shop/products/search.json?q=jordan&media_file=true*/ 
+
+/*import fetch from "node-fetch";*/
+
+/*
+const api_url = 'https://webshop.wm3.se/api/v1/shop/products';
+
+getData();
+
+async function getData() {
+
+const response = await fetch(api_url);
+const data = await response.json();
+console.log(data);
+
+document.getElementById('lat').textContent = data;
+
+}*/
