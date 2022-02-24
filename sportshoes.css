@@ -200,9 +200,18 @@ ul {
     background-position: cover;
 }
 
-.middlesectiontext {
+.middlesectiontext, .middlesectiontextone, .middlesectiontexttwo, .middlesectiontextfour {
     color: rgb(82, 82, 82);
     font-weight: 700;
+    position: absolute;
+    margin-top: -60px;
+}
+
+ .middlesectiontextthree, .middlesectiontextfive, .middlesectiontextsix {
+    color: rgb(82, 82, 82);
+    font-weight: 700;
+    position: absolute;
+    margin-top: -120px;
 }
 
 .carousel-item button {
@@ -256,6 +265,7 @@ ul {
     z-index: 10;
     /*clip: rect(80px,40px,30px,0px);*/
     position: absolute;
+    margin-bottom: 40px;
 }
 
 
@@ -277,6 +287,20 @@ ul {
 
 .footertext {
     color: white;
+}
+
+#image1, #image2, #image3, #image4, #image5, #image6 {
+    background-size: cover;
+}
+
+#image1, #image2, #image4 {
+    background-position: center;
+    height: 380px;
+    margin-top: -60px;
+}
+
+#image3, #image5, #image6 {
+    margin-top: -60px;
 }
 
 @media only screen and (max-width: 900px) {

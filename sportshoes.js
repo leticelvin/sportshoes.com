@@ -27,14 +27,27 @@ let request = new XMLHttpRequest();
            var productTextOne = importantdata.products[0].name; 
            var productTextTwo = importantdata.products[1].name;
            var productTextThree = importantdata.products[2].name;
+           var productTextFour = importantdata.products[3].name; 
+           var productTextFive = importantdata.products[4].name;
+           var productTextSix = importantdata.products[5].name;
 
            var productTextOneCapitalized = productTextOne.toUpperCase();
            var productTextTwoCapitalized = productTextTwo.toUpperCase();
            var productTextThreeCapitalized = productTextThree.toUpperCase();
+           var productTextFourCapitalized = productTextFour.toUpperCase();
+           var productTextFiveCapitalized = productTextFive.toUpperCase();
+           var productTextSixCapitalized = productTextSix.toUpperCase();
 
            document.querySelector('.shoenameone').textContent = productTextOneCapitalized;  
            document.querySelector('.shoenametwo').textContent = productTextTwoCapitalized;  
            document.querySelector('.shoenamethree').textContent = productTextThreeCapitalized;
+
+           document.querySelector('.middlesectiontextone').textContent = productTextOneCapitalized;  
+           document.querySelector('.middlesectiontexttwo').textContent = productTextTwoCapitalized;  
+           document.querySelector('.middlesectiontextthree').textContent = productTextThreeCapitalized;
+           document.querySelector('.middlesectiontextfour').textContent = productTextFourCapitalized;  
+           document.querySelector('.middlesectiontextfive').textContent = productTextFiveCapitalized;  
+           document.querySelector('.middlesectiontextsix').textContent = productTextSixCapitalized;
            /*-----------------------------------------------------------------------------*/
 
            /*----------------Prices-------------------------------------------------------*/
